@@ -1,0 +1,26 @@
+debian-sysv-helpers-missing
+===========================
+v2025.268
+
+Starting with Debian "Trixie" 13 (but not limited to it), this 
+repository shall provide files for supporting sys-v init in certain 
+packages that dropped support for sys-v in favor of systemd.
+
+The files are provided in the form of Debian packages (*.deb), which 
+will be built when running the provided "build_debs.sh" shell script.
+
+The *.deb files are generally named after the original packages for 
+which they provide missing files.
+
+For instance, if the name of the original package was "mdadm", then 
+this repository will provide a package named "mdadm-sysvinit-helper" 
+which will install the files for sys-v init support which have been 
+removed from newer versions of the "mdadm" package.
+
+The packages provided by this repository normally depend on the 
+original packages as dependencies.
+
+Which means one does not need to manually install both "mdadm" and 
+"mdadm-sysvinit-helper". It will be sufficient to install 
+"mdadm-sysvinit-helper", and "mdadm" will be installed automatically as 
+a required dependency.
