@@ -1,0 +1,10 @@
+#! /bin/sh
+
+set -e
+
+if [ "$1" = "remove" ] && [ -x "/etc/init.d/haveged" ] ; then
+	chmod -x "/etc/init.d/haveged" >/dev/null || true
+fi
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = "purge" ] ; then
+	update-rc.d haveged remove >/dev/null
+fi

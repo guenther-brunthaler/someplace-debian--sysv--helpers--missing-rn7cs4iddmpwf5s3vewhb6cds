@@ -1,0 +1,17 @@
+Package: AAAA-sysvinit-helper
+Version: 1.0
+Architecture: all
+Maintainer: Guenther Brunthaler <root@emgenxx69lwyn5ctlr4nl64ul.local>
+Depends: aaaa (>= a.a.a)
+...
+Description: ...
+ .
+ This package adds all support files to the beforementioned primary
+ service package which are necessary to add sysv-init support, because
+ the primary package only supports systemd.
+ .
+ This includes configuration files as well as any missing service
+ /scripts in etc/init.d/*.
+ .
+ This package also depends on the primary package, so that the primary
+ package will be installed automatically as a dependency.

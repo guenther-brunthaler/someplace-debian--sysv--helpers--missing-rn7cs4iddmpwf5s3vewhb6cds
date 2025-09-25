@@ -1,0 +1,4 @@
+/etc/cron.d/mdadm
+/etc/cron.daily/mdadm
+/etc/init.d/mdadm
+/etc/init.d/mdadm-waitidle

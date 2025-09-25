@@ -1,0 +1,16 @@
+Package: mdadm-sysvinit-helper
+Version: 1.3
+Architecture: all
+Maintainer: Guenther Brunthaler <root@emgenxx69lwyn5ctlr4nl64ul.local>
+Pre-Depends: init-system-helpers (>= 1.54~)
+Depends: mdadm (>= 4.2-5)
+Section: admin
+Priority: optional
+Homepage: https://raid.wiki.kernel.org/index.php/Linux_Raid
+Description: Tool to administer Linux MD arrays (software RAID)
+ The mdadm utility can be used to create, manage, and monitor MD
+ (multi-disk) arrays for software RAID or multipath I/O.
+ .
+ This package automatically configures mdadm to assemble arrays during the
+ sysv-init system startup process. If not needed, this functionality can
+ be disabled.

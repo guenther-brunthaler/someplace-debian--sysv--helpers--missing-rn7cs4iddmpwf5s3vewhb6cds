@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = remove ] && [ -x "/etc/init.d/haveged" ] ; then
+	invoke-rc.d --skip-systemd-native haveged stop || exit 1
+fi

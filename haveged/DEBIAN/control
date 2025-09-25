@@ -1,0 +1,28 @@
+Package: haveged-sysvinit-helper
+Version: 1.0
+Architecture: all
+Maintainer: Guenther Brunthaler <root@emgenxx69lwyn5ctlr4nl64ul.local>
+Depends: haveged (>= 1.9.19-12)
+Section: misc
+Priority: optional
+Homepage: https://issihosts.com/haveged/
+Description: Linux entropy source using the HAVEGE algorithm
+ haveged is a userspace entropy daemon which is not dependent upon the
+ standard mechanisms for harvesting randomness for the system entropy
+ pool. This is important in systems with high entropy needs or limited
+ user interaction (e.g. headless servers).
+ .
+ haveged uses HAVEGE (HArdware Volatile Entropy Gathering and Expansion)
+ to maintain a 1M pool of random bytes used to fill
+ /dev/random whenever the supply of random bits in dev/random falls
+ below the low water mark of the device.
+ .
+ This package adds all support files to the beforementioned primary
+ service package which are necessary to add sysv-init support, because
+ the primary package only supports systemd.
+ .
+ This includes configuration files as well as any missing service
+ /scripts in etc/init.d/*.
+ .
+ This package also depends on the primary package, so that the primary
+ package will be installed automatically as a dependency.
